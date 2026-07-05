@@ -1,0 +1,153 @@
+/* Bernardo Almeida — personal site (v2)
+   Minimalist, text-first style inspired by jackgw.com */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg: #F6F4F3;
+  --text: #183059;
+  --link: #276FBF;
+  --link-hover: #1d5499;
+  --border: #d4cfc9;
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nav */
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 36px 24px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0 0 36px;
+  padding: 0;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+}
+nav a:hover { text-decoration: underline; }
+nav a.current {
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* Main content */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* Headings */
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 28px;
+}
+h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 40px 0 14px;
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+a:hover { color: var(--link-hover); }
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin: 0 0 8px;
+}
+li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Bio: three-column layout */
+.bio-columns {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.bio-col {
+  flex: 1;
+  min-width: 0;
+}
+.bio-col h2 {
+  margin-top: 0;
+}
+
+/* About: photo left, text right */
+.about-layout {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+.profile-photo {
+  width: 260px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  height: auto;
+}
+.about-text {
+  text-align: justify;
+  margin: 0;
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+  padding: 24px 24px 48px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bio-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  .bio-col h2 {
+    margin-top: 32px;
+  }
+  .about-layout {
+    flex-direction: column;
+  }
+  .profile-photo {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  h1 { font-size: 26px; }
+}
