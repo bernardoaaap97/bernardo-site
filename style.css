@@ -164,7 +164,7 @@ ul.bio-list li a:hover {
 /* Footer */
 footer {
   max-width: var(--max-width);
-  margin: 48px auto 0;
+  margin: 20px auto 0;
   padding: 24px 24px 48px;
   border-top: 1px solid var(--border);
   font-size: 15px;
