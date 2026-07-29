@@ -1,62 +1,31 @@
-# Claude Code — Add Blog page
+# Claude Code — Fix nav on index.html and timeline.html
 
-## 1. Create `blog.html`
+The Blog nav item is missing from two pages. Fix ONLY the <nav> section on these two files — do not touch anything else.
 
-Create a new file `blog.html` with this exact content:
+## 1. `index.html` — replace the nav with:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog — Bernardo Almeida</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<nav>
+  <ul>
+    <li><a href="index.html" class="current">About</a></li>
+    <li><a href="timeline.html">Timeline</a></li>
+    <li><a href="bio.html">Bio</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+</nav>
+```
+
+## 2. `timeline.html` — replace the nav with:
+
+```html
 <nav>
   <ul>
     <li><a href="index.html">About</a></li>
-    <li><a href="timeline.html">Timeline</a></li>
+    <li><a href="timeline.html" class="current">Timeline</a></li>
     <li><a href="bio.html">Bio</a></li>
-    <li><a href="blog.html" class="current">Blog</a></li>
+    <li><a href="blog.html">Blog</a></li>
   </ul>
 </nav>
-<main>
-  <h1>Blog</h1>
-  <p class="blog-soon">Soon: work in progress.</p>
-</main>
-<footer>
-  <p><strong>Message Me:</strong><br>
-  Email: <a href="mailto:bernardoaaap@gmail.com">bernardoaaap@gmail.com</a><br>
-  <a href="https://www.linkedin.com/in/bernardo-almeida-952a02128/" target="_blank" rel="noopener">LinkedIn</a> ·
-  <a href="https://x.com/Bernardoaaap" target="_blank" rel="noopener">X</a></p>
-</footer>
-</body>
-</html>
 ```
 
-## 2. Update nav on ALL other pages
-
-Add `<li><a href="blog.html">Blog</a></li>` as the last item in the `<nav><ul>` on:
-- `index.html`
-- `timeline.html`
-- `bio.html`
-
-## 3. Add CSS rule to `style.css`
-
-Append this rule at the end of style.css:
-
-```css
-.blog-soon {
-  font-size: 22px;
-  margin-top: 48px;
-}
-```
-
-## 4. Final check
-
-Confirm blog.html exists, nav on all 4 pages has 4 items, and style.css has the .blog-soon rule. Give a short summary.
+Do not touch bio.html, blog.html, style.css, or any other content. Only the nav on these two files.
